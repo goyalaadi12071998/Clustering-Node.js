@@ -6,6 +6,9 @@ if(cluster.isMaster){
     // Cause running of index.js again
     //in slave mode 
     cluster.fork();
+    cluster.fork();
+    cluster.fork();
+    cluster.fork();
 
 }else{
 
@@ -23,6 +26,10 @@ if(cluster.isMaster){
     app.get('/', (req, res) => {
         doWork(5000);
         res.send('Hi there!');
+    });
+
+    app.get('/fast',function(req, res) {
+        res.send('This is fast');
     });
 
     app.listen(3000,function(){

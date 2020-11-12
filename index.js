@@ -10,6 +10,8 @@ if(cluster.isMaster){
     cluster.fork();
     cluster.fork();
 
+    //There is a limit beacause all the work is done by cpu at all
+
 }else{
 
     const express = require('express');

@@ -14,7 +14,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/fast',function(req, res) {
-    res.send('This is fast en');
+    res.send('This is fast file');
 });
 
 app.listen(3000,function(){
